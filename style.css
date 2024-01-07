@@ -49,7 +49,7 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: .75rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   height: 3.5rem;
   border-radius: 0.25rem;
   background-color: #e50914;
@@ -69,6 +69,49 @@ body {
   width: 100%;
   background-color: #232323;
 }
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+}
+
+.accordion-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2d2d2d;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  border-bottom: 1px solid #000000;
+  &:hover {
+    background-color: #414141;
+  }
+  &.active + .accordion-content {
+    max-height: 75rem;
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  } 
+  &.active .accordion-indicator::after {
+    content: "-";
+  }
+}
+
+.accordion-content {
+  overflow: hidden;
+  max-height: 0;
+  padding: 0px 1.5rem;
+  transition: all 0.25s ease-in-out;
+  background-color: #2d2d2d;
+}
+
+.accordion-indicator {
+  font-size: 2.25rem;
+  &::after {
+    content: "+";
+  }
+}
+
 
 .section {
   position: relative;
@@ -92,7 +135,7 @@ body {
     flex-direction: column;
     padding: 0;
   }
-  header  {
+  header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -122,16 +165,34 @@ body {
       rgba(0, 0, 0, 0.8) 100%
     );
   }
-  .email-from-wrapper {
-    display: flex;
+
+}
+
+.email-from-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  text-align: center;
+}
+.email-form {
+  display: flex;
+  margin: 1rem auto 0;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 36.625rem;
+}
+
+.section-faq {
+  .container {
     flex-direction: column;
-    margin-top: 1.5rem;
+    align-items: center;
   }
-  .email-form {
-    display: flex;
-    margin: 1rem auto 0;
-    gap: 0.5rem;
-    width: 100%;
-    max-width: 36.625rem;
+  ul {
+    flex-direction: column;
+    list-style: none;
+    margin-bottom: 1.5rem;
+    li + li {
+      margin-top: 0.5rem;
+    }
   }
 }
