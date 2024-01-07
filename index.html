@@ -5,8 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/29d1e17a40.js"
+      crossorigin="anonymous"
+    ></script>
     <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Roboto:wght@400;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -18,7 +22,17 @@
         <header>
           <img src="./assets/images/logo.svg" alt="logo" />
           <div class="login">
-            <button class="btn text-md">Sign in</button>
+            <div class="select-wrapper">
+              <i class="fas fa-globe"></i>
+              <select>
+                <option selected="" lang="pt" label="Português" value="pt-BR">
+                  Português
+                </option>
+                <option lang="en" label="English" value="en-BR">English</option>
+              </select>
+            </div>
+
+            <button class="btn btn-md">Sign in</button>
           </div>
         </header>
         <img class="bg-img" src="./assets/images/bg-image.jpg" />
@@ -40,11 +54,13 @@
               name="email"
               id="email"
             />
-            <button class="btn text-lg">Get Started ></button>
+            <button class="btn btn-lg">Get Started ></button>
           </form>
         </div>
       </div>
     </section>
+
+    <div class="divider"></div>
 
     <section class="section">
       <div class="container">
@@ -214,11 +230,60 @@
               name="email"
               id="email"
             />
-            <button class="btn text-lg">Get Started ></button>
+            <button class="btn btn-lg">Get Started ></button>
           </form>
         </div>
       </div>
     </section>
+
+    <div class="divider"></div>
+
+    <footer class="section">
+      <div class="container">
+        <div class="footer-links">
+          <ul class="footer-links-column">
+            <li><a href="#">Audio and Subtitles</a></li>
+            <li><a href="#">Media Center</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+
+          <ul class="footer-links-column">
+            <li><a href="#">Audio Description</a></li>
+            <li><a href="#">Investor Relations</a></li>
+            <li><a href="#">Legal Notices</a></li>
+          </ul>
+
+          <ul class="footer-links-column">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+          </ul>
+
+          <ul class="footer-links-column">
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Corporate Information</a></li>
+          </ul>
+          <ul class="footer-links-column">
+            <li>
+              <div class="select-wrapper">
+                <i class="fas fa-globe"></i>
+                <select>
+                  <option selected="" lang="pt" label="Português" value="pt-BR">
+                    Português
+                  </option>
+                  <option lang="en" label="English" value="en-BR">
+                    English
+                  </option>
+                </select>
+              </div>
+            </li>
+            <li><span>Netflix Brasil</span></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
     <script>
       const accordionTriggers = document.querySelectorAll(".accordion-trigger");
